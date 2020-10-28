@@ -11,15 +11,17 @@ const Works = () => {
     <p>
       <FormattedMessage id="works.text"/>
     </p>
-      <button onClick={() => window.location.href += "/platon-study-case" }>
+    <section>
+      <div className="card" onClick={() => window.location.href += "/platon-study-case" }>
         <FormattedMessage id="platon.title" />
-      </ button>
-      <button onClick={() => window.location.href += "/sedal-study-case" }>
+      </ div>
+      <div className="card" onClick={() => window.location.href += "/sedal-study-case" }>
         <FormattedMessage id="sedal.title" />
-      </ button>
-      <button onClick={() => window.location.href += "/solane-study-case" }>
+      </ div>
+      <div className="card" onClick={() => window.location.href += "/solane-study-case" }>
         <FormattedMessage id="solane.title" />
-      </ button>
+      </ div>
+    </section>
     </>
   )
 }

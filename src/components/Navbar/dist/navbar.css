@@ -7,6 +7,7 @@ body .main {
   width: 100%;
 }
 body .main nav {
+  margin-bottom: 80px;
   display: flex;
   justify-content: space-around;
   background-color: #161616;
@@ -46,4 +47,21 @@ body .main nav img:hover {
 body .main p {
   padding-right: 200px;
   padding-left: 200px;
+}
+body .main section {
+  display: flex;
+  justify-content: space-around;
+}
+body .main section .card {
+  cursor: pointer;
+  margin-top: 70px;
+  padding: 40px;
+  width: 250px;
+  height: 150px;
+  border-radius: 3%;
+  box-shadow: 0 0.5rem 0.5rem rgba(0, 0, 0, 0.15);
+  transition: transform 300ms 200ms ease-in;
+}
+body .main section .card:hover {
+  transform: translateY(-10px) scale(1.1);
 }
