@@ -4,15 +4,26 @@ import Home from '../../pages/Home';
 import Works from '../../pages/Works';
 import About from '../../pages/About';
 import StudyCase from '../StudyCase';
+import './dist/navbar.css'
 
 const Navbar = ({changeLanguage}) => {
   return (
-    <nav>
+    <div className="main">
       <Router>
-        <Link to='/'>Accueil</Link>
-        <Link to='/works'>Travaux</Link>
-        <Link to='/about'>A propos</Link>
-        <button onClick={() => changeLanguage()}>change language</button>
+        <nav>
+          <Link to='/'className="nav-link">Accueil</Link>
+          <Link to='/works'className="nav-link">Travaux</Link>
+          <Link to='/about'className="nav-link">A propos</Link>
+          {
+            localStorage.getItem("language") === "en" &&
+            <img src="https://cdn.countryflags.com/thumbs/france/flag-round-250.png" onClick={() => changeLanguage()} />
+          }
+          {
+            localStorage.getItem("language") !== "en" &&
+            <img src="https://cdn.countryflags.com/thumbs/united-kingdom/flag-round-250.png" onClick={() => changeLanguage()} />
+          }
+        </nav>
+        
         <Switch>
             <Route exact path="/">
               <Home />
@@ -28,7 +39,7 @@ const Navbar = ({changeLanguage}) => {
             </Route>
           </Switch>
       </Router>
-    </nav>
+    </div>
   )
 }
 

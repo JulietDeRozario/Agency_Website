@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { IntlProvider } from 'react-intl';
 import Navbar from './components/Navbar';
@@ -20,7 +20,10 @@ const App = () => {
     }else {
       setLanguage('fr')
     }
+    localStorage.clear();
   }
+
+  localStorage.setItem("language", language);
 
   return (
     <IntlProvider locale={language} messages={text[language]}>

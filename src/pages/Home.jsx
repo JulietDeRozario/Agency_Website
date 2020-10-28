@@ -1,8 +1,17 @@
 import React from 'react'; 
+import { injectIntl, FormattedMessage } from 'react-intl';
+
 
 const Home = () => {
   return (
-    <h1>Home</h1>
+    <>
+    <h1>
+      <FormattedMessage id="home.title"/>
+    </h1>
+    <p>
+      <FormattedMessage id="home.text"/>
+    </p>
+    </>
   )
 }
 
